@@ -1,11 +1,11 @@
 import {Action} from "../types";
 
-interface HackerStory {
+export interface HackerStory {
     id: number;
     title: string;
 }
 
-interface HackerAppState {
+export interface HackerAppState {
     stories: HackerStory[]
 }
 
