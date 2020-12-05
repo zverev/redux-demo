@@ -5,15 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import createHackerNewsStore from "./store/store";
+import {Provider} from "react-redux";
 
+const store = createHackerNewsStore();
+
+// for debug purposes
 // @ts-ignore
-window.store = createHackerNewsStore();
-
+window.store = store
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
