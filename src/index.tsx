@@ -1,8 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import createHackerNewsStore from "./store/store";
+
+// @ts-ignore
+window.store = createHackerNewsStore();
+
 
 ReactDOM.render(
   <React.StrictMode>
